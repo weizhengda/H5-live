@@ -124,6 +124,10 @@ module.exports = {
       name: 'frozen',
       var: 'frozen',
       url: 'lib/frozen.min.js'
+    },{
+      name:'vue',
+      var:'vue',
+      url:'https://cdn.jsdelivr.net/npm/vue'
     }], {
       // Resolve local modules relative to this directory
       basedir: __dirname

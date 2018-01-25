@@ -115,6 +115,10 @@ module.exports = {
       name: 'frozen',
       var: 'frozen',
       url: 'lib/frozen.min.js'
+    },{
+      name:'vue',
+      var:'vue',
+      url:'https://cdn.bootcss.com/vue/2.5.13/vue.min.js'
     }], {
       // Resolve local modules relative to this directory
       basedir: __dirname
