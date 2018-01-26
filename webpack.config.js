@@ -123,7 +123,7 @@ module.exports = {
     },{
       name:'vue',
       var:'vue',
-      url:'https://cdn.jsdelivr.net/npm/vue'
+      url:'https://cdn.bootcss.com/vue/2.5.13/vue.min.js'
     }], {
       // Resolve local modules relative to this directory
       basedir: __dirname

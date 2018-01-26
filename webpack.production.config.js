@@ -14,7 +14,7 @@ module.exports = {
     "index": [path.resolve(__dirname, 'src/index.js')]
   },
   output: {
-    path: path.resolve(__dirname + '/disk'),
+    path: path.resolve(__dirname + '/jdf-live'),
     publicPath: '',
     filename: './js/[name].min.js'
   },
@@ -125,19 +125,19 @@ module.exports = {
     }),
     new CopyWebpackPlugin([{
       from: __dirname + '/src/index.html',
-      to: __dirname + '/disk/'
+      to: __dirname + '/jdf-live/'
     }]),
     new CopyWebpackPlugin([{
       from: __dirname + '/src/live.html',
-      to: __dirname + '/disk/'
+      to: __dirname + '/jdf-live/'
     }]),
     new CopyWebpackPlugin([{
       from: __dirname + '/src/lib',
-      to: __dirname + '/disk/lib'
+      to: __dirname + '/jdf-live/lib'
     }]),
     new CopyWebpackPlugin([{
       from: __dirname + '/src/images',
-      to: __dirname + '/disk/images'
+      to: __dirname + '/jdf-live/images'
     }])
   ]
 };

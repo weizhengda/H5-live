@@ -17,7 +17,7 @@ video::-webkit-media-controls {
   position: absolute;
   top:0;
   left:0;
-  background-color: #fefefe;
+  background-color: rgba(0,0,0,.2);
 }
 .prism-controlbar{
   display: none !important;
