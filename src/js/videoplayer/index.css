@@ -12,4 +12,26 @@ video.center
 video::-webkit-media-controls {
   display:none !important;
 }
+.prism-player{
+  height:100% !important;
+  position: absolute;
+  top:0;
+  left:0;
+  background-color: #fefefe;
+}
+.prism-controlbar{
+  display: none !important;
+}
 
+.ui-tab-content{
+  height:600px !important;
+}
+
+.comment-list{
+  height:200px !important;
+}
+
+.prism-big-play-btn{
+  left:35% !important;
+  bottom: 45% !important;
+}

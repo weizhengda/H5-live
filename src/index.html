@@ -45,18 +45,18 @@
 </head>
 
 <body>
-    <div class="home">
+    <div id="home">
         <h3>正在进行</h3>
         <div class="top">
             <a href="live.html">进入直播间</a>
             <span>|</span>
-            <i>￥50000.00 奖金</i>
+            <i>￥{{reward}}奖金</i>
         </div>
         <div class="user">
             <div class="user-name">用户昵称</div>
             <div class="money">
                 <p>我的零钱</p>
-                <p>￥100元</p>
+                <p>￥{{money}}元</p>
             </div>
             <div class="life">
                 <span>复活次数</span><i>*</i><span>加复活次数</span>
@@ -65,5 +65,13 @@
         <div class="invite">邀请好友</div>
     </div>
 </body>
-
+<script>
+    var app = new Vue({
+        el:"#home",
+        data:{
+            reward:50000.00,
+            money:100
+        }
+    })
+</script>
 </html>

@@ -56,6 +56,7 @@ module.exports = {
     }]
   },
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),// 热更新模块
     new webpack.LoaderOptionsPlugin({
       options: {
         postcss: function () {
@@ -84,6 +85,7 @@ module.exports = {
         inject: 'body',
         excludeChunks:['live'],
         hash: true,
+        alwaysWriteToDisk: true
     }),
     new HtmlWebpackPlugin({
         filename: 'live.html',
@@ -92,17 +94,11 @@ module.exports = {
         excludeChunks:['index'],
         hash: true,
     }),
-    new webpack.optimize.DedupePlugin(),
+    // new webpack.optimize.DedupePlugin(),
     new uglifyJsPlugin({
       compress: {
         warnings: false
       }
-    }),
-    new HtmlWebpackPlugin({
-        filename: 'live.html',
-        template: './src/live.html',
-        inject: 'body',
-        hash: true
     }),
     new HtmlWebpackExternalsPlugin([{
       name: 'zepto',
