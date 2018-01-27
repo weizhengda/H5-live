@@ -4,7 +4,7 @@ import Comment from './js/comment';
 import Favoriate from './js/favoriate';
 import CommentSender from './js/commentsender';
 import util from './js/util';
-require('./css/index.css');
+require('./css/live.css');
 var comment, favoriate;
 $(()=>{
 	var player = new VideoPlayer({
