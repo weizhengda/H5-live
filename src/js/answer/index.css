@@ -1,0 +1,60 @@
+    #answer{
+        width:100%;
+        position:absolute;
+        background:#fefefe;
+        z-index: 1;
+    }
+    #answer:after{
+        width: 100%;
+        height: 60px;
+        position: absolute;
+        left: 0;
+        top:100%;
+        z-index: 0;
+        content: '';
+        border-radius: 0 0 50% 50%;
+        background:#fff;
+    }
+    #answer .top{
+        width:100%;
+        height:50px;
+        line-height:50px;
+        display:flex;
+        justify-content:space-around;
+    }
+    #answer .top i{
+        width:40px;
+        height:40px;
+        line-height:40px;
+        text-align: center;
+        margin-top:10px;
+        background:#999;
+        border-radius:50%;
+    }
+    #answer h3{
+        width:80%;
+        margin:10px auto;
+        text-align: center;
+    }
+    #answer ul{
+        width:80%;
+        margin:0 auto;
+    }
+    #answer ul li{
+         height:30px;
+         line-height:30px;
+         text-align:left;
+         margin:10px 0;
+         padding:0 20px;
+         list-style:none;
+         border:1px solid #999;
+         border-radius:20px;
+     }
+    #answer ul li.true{
+        color:#fff;
+        background:green;
+    }
+     #answer ul li.false{
+        color:#fff;
+        background:red;
+     }

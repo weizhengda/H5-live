@@ -10,7 +10,6 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   entry: {
-    "live": [path.resolve(__dirname, 'src/live.js')],
     "index": [path.resolve(__dirname, 'src/index.js')]
   },
   output: {
@@ -74,18 +73,6 @@ module.exports = {
         filename: 'index.html',
         template: './src/index.html',
         inject: 'body',
-        excludeChunks:['live'],
-        hash: true,
-        minify: { //压缩HTML文件
-          removeComments: true, //移除HTML中的注释
-          collapseWhitespace: true //删除空白符与换行符
-        }
-    }),
-    new HtmlWebpackPlugin({
-        filename: 'live.html',
-        template: './src/live.html',
-        inject: 'body',
-        excludeChunks:['index'],
         hash: true,
         minify: { //压缩HTML文件
           removeComments: true, //移除HTML中的注释
@@ -125,10 +112,6 @@ module.exports = {
     }),
     new CopyWebpackPlugin([{
       from: __dirname + '/src/index.html',
-      to: __dirname + '/jdf-live/'
-    }]),
-    new CopyWebpackPlugin([{
-      from: __dirname + '/src/live.html',
       to: __dirname + '/jdf-live/'
     }]),
     new CopyWebpackPlugin([{

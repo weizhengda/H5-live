@@ -1,34 +1,29 @@
-   body{
-            margin:0;
-            padding:0;
-            text-align: center;
-        }
-        h3 {
-            margin: 50px auto;
-        }
+html,
+body
+{
+  height: 100%;
+	margin:0;
+	padding:0;
+}
 
-        .user {
-            width: 80%;
-            height: auto;
-            margin: 40px auto;
-            padding: 20px 0;
-            border: 1px solid #999;
-            border-radius: 10px;
-            background: #fff;
-        }
+body
+{
+  font-size:16px !important;
+}
 
-        .life {
-            display: flex;
-            justify-content: space-around;
-        }
+ul
+{
+	padding:0px;
+	margin:0px;
+}
 
-        .invite {
-            width: 80%;
-            height: 50px;
-            line-height: 50px;
-            margin: 100px auto;
-            text-align: center;
-            background: #fff;
-            border: 1px solid #999;
-            border-radius: 5px;
-        }
+ul li
+{
+    list-style-type:none;
+}
+
+
+[v-cloak] {
+  display: none;
+}
+

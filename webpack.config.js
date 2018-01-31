@@ -9,7 +9,6 @@ const Autoprefixer = require('autoprefixer');
 
 module.exports = {
   entry: {
-    "live": [path.resolve(__dirname, 'src/live.js')],
     "index": [path.resolve(__dirname, 'src/index.js')]
   },
   output: {
@@ -83,16 +82,8 @@ module.exports = {
         filename: 'index.html',
         template: './src/index.html',
         inject: 'body',
-        excludeChunks:['live'],
         hash: true,
         alwaysWriteToDisk: true
-    }),
-    new HtmlWebpackPlugin({
-        filename: 'live.html',
-        template: './src/live.html',
-        inject: 'body',
-        excludeChunks:['index'],
-        hash: true,
     }),
     // new webpack.optimize.DedupePlugin(),
     new uglifyJsPlugin({
@@ -130,10 +121,6 @@ module.exports = {
     }),
     new CopyWebpackPlugin([{
       from: __dirname + '/src/index.html',
-      to: __dirname + '/disk/'
-    }]),
-    new CopyWebpackPlugin([{
-      from: __dirname + '/src/live.html',
       to: __dirname + '/disk/'
     }]),
     new CopyWebpackPlugin([{
