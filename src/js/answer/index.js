@@ -21,16 +21,15 @@ export default class Answer {
             }
         ];
         this.addData();
+        this.hide();
     }
     // 从服务器获取答题数据
     addData() {
         $.ajax();
     }
     // 移除答题面板
-    removeEl() {
-        if (this.container) {
-            this.container.remove();
-        }
+    hide() {
+        $("#answer").hide();
     }
 
 }

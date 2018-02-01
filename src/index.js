@@ -4,8 +4,9 @@ import Comment from './js/comment';
 import Favoriate from './js/favoriate';
 import CommentSender from './js/commentsender';
 import util from './js/util';
+import Answer from './js/answer';
 require('./css/index.css');
-var comment, favoriate;
+var comment, favoriate,answer;
 $(()=>{
 	var player = new VideoPlayer({
 	        id: 'J_prismPlayer',
@@ -41,6 +42,7 @@ $(()=>{
   var wrapper = $('.comment-list');
   comment = new Comment(wrapper);
   favoriate  = new Favoriate(wrapper);
+  answer = new Answer();
   let offset = $('.ui-tab .ui-tab-nav').offset();
   let remainHeight = util.screenHeight() - offset.top - offset.height;
   $('.ui-tab-content').height(remainHeight);
