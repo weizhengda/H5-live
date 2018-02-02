@@ -5,8 +5,9 @@ import Favoriate from './js/favoriate';
 import CommentSender from './js/commentsender';
 import util from './js/util';
 import Answer from './js/answer';
+import Home from './js/home'
 require('./css/index.css');
-var comment, favoriate,answer;
+var comment, favoriate,answer,home;
 $(()=>{
 	var player = new VideoPlayer({
 	        id: 'J_prismPlayer',
@@ -22,31 +23,20 @@ $(()=>{
           x5_type:'h5', //通过 video 属性 “x5-video-player-type” 声明启用同层H5播放器，支持的值：h5 https://x5.tencent.com/tbs/guide/video.html
 	      cover: 'http://liveroom-img.oss-cn-qingdao.aliyuncs.com/logo.png'
         });
-    var dataList = [{
-    	url:'http://common.qupai.me/player/qupai.mp4',
-    	cover:'images/cover1.png',
-    	title:"分享精彩生活"
-        },
-        {
-    	url:'http://player.alicdn.com/video/1.mp4',
-    	cover:'images/cover2.png',
-    	title:"多力多滋"
-        },
-        {
-    	url:'http://player.alicdn.com/video/11.mp4',
-    	cover:'images/cover3.png',
-    	title:"马云讲新零售"
-        }];
-	VideoList.setup('videolist',dataList, player);
   CommentSender.setup();
   var wrapper = $('.comment-list');
   comment = new Comment(wrapper);
   favoriate  = new Favoriate(wrapper);
   answer = new Answer();
+  home = new Home();
   let offset = $('.ui-tab .ui-tab-nav').offset();
   let remainHeight = util.screenHeight() - offset.top - offset.height;
   $('.ui-tab-content').height(remainHeight);
   $('.comment-textbox').show();
+  $('#enter').click(function(){
+    home.hide();
+    player.played = true;
+  })
   $(function (){
             var option = {
                 role: 'tab',

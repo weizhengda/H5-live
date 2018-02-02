@@ -1,14 +1,15 @@
-require('./index')
+require('./index.css')
 console.log('this is home page!')
 export default class Home{
    constructor() {
-       this.hiden();
-   };
-   
+       this.show();
+   };  
    show(){
-       $("#home").hiden();
+       $("#home").show();
+       $("#live").hide();
    };
-   hiden(){
-      $("#home").show();
+   hide(){
+       $("#home").hide();
+       $("#live").show();
    }
 }
